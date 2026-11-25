@@ -1,6 +1,6 @@
 cask "glucobar" do
-  version "0.3.0"
-  sha256 "425f7ee854ec3ce59099939fce93be2b1e27d3b84d5aaf8c8087e86fe8d64c18"
+  version "0.4.0"
+  sha256 "a81c422edd57cac17f7ae8a94a2bdc03e6110d73a58b79afaa1b62b8578240cc"
 
   url "https://github.com/motiko/glucobar/releases/download/v#{version}/GlucoBar-#{version}.zip"
   name "GlucoBar"
@@ -16,12 +16,6 @@ cask "glucobar" do
 
   app "GlucoBar.app"
 
-  # Not notarized: clear the quarantine flag (while the app is still staged) so Gatekeeper
-  # doesn't block it after every install/upgrade. Removed once releases use Developer ID.
-  preflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "GlucoBar.app"],
-                          chdir: ".", writable_paths: ["GlucoBar.app"]
-  end
 
   uninstall quit: "dev.moti.glucobar"
 
