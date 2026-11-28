@@ -1,6 +1,6 @@
 cask "glucobar" do
-  version "0.4.1"
-  sha256 "2d489b82107fd933773faa3bbe72f37ff30b0e96750b1aa2797f485d912cd584"
+  version "0.3.1"
+  sha256 "9780ce521a8f96a1170d4ab89afb1a582ed317a6f4435a10a1db709ff6f88441"
 
   url "https://github.com/motiko/glucobar/releases/download/v#{version}/GlucoBar-#{version}.zip"
   name "GlucoBar"
